@@ -4,11 +4,11 @@
     "private": true,
     "scripts": {
         "start": "node app.js",
-        "prettier": "prettier --check .",
-        "prettier:fix": "prettier --write .",
-        "lint": "eslint .",
-        "lint:fix": "eslint --fix .",
-        "code:fix": "prettier --write . && eslint --fix .",
+        "prettier": "prettier -c \"*.js\"",
+        "prettier:fix": "prettier -w \"*.js\"",
+        "lint": "eslint \"*.js\"",
+        "lint:fix": "eslint --fix \"*.js\"",
+        "code:fix": "npm run prettier:fix && npm run lint:fix",
         "test": "jest",
         "test:coverage": "jest --coverage",
         "test:watch": "jest --watchAll"
@@ -23,6 +23,7 @@
     },
     "devDependencies": {
         "eslint": "^8.30.0",
+        "eslint-config-prettier": "^8.5.0",
         "eslint-config-standard": "^17.0.0",
         "eslint-plugin-import": "^2.26.0",
         "eslint-plugin-n": "^15.6.0",
