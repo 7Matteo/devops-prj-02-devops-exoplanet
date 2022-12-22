@@ -12,14 +12,14 @@ router.get("/", (req, res, next) => {
 /* POST add exoplanet. */
 router.post("/add", (req, res, next) => {
     console.log("POST ADD EXOPLANET");
-    if(checkUniqueName(req.body.uniqueNameExoplanet)){
+    if (checkUniqueName(req.body.uniqueNameExoplanet)) {
         Exoplanet.save({
             uniqueName: req.body.uniqueNameExoplanet,
             hClass: req.body.hClassExoplanet,
             discoveryYear: req.body.discoveryYearExoplanet,
         });
     }
-    
+
     res.redirect("/exoplanets");
 });
 
