@@ -24,3 +24,10 @@ module.exports.search = (uniqueName) => {
   }
   return exoplanetList
 }
+
+module.exports.checkUniqueName = (uniqueName) => {
+
+
+  
+  return true;
+}

@@ -16,6 +16,7 @@ router.post('/add', (req, res, next) => {
     hClass: req.body.hClassExoplanet,
     discoveryYear: req.body.discoveryYearExoplanet
   })
+
   res.redirect('/exoplanets')
 })
 
@@ -33,5 +34,6 @@ router.get('/search', (req, res, next) => {
     min3Char
   })
 })
+
 
 module.exports = router
