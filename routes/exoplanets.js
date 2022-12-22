@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const { checkUniqueName } = require("../models/Exoplanet");
 
 const Exoplanet = require("../models/Exoplanet.js");
 
@@ -11,12 +12,14 @@ router.get("/", (req, res, next) => {
 /* POST add exoplanet. */
 router.post("/add", (req, res, next) => {
     console.log("POST ADD EXOPLANET");
-    Exoplanet.save({
-        uniqueName: req.body.uniqueNameExoplanet,
-        hClass: req.body.hClassExoplanet,
-        discoveryYear: req.body.discoveryYearExoplanet,
-    });
-
+    if(checkUniqueName(req.body.uniqueNameExoplanet)){
+        Exoplanet.save({
+            uniqueName: req.body.uniqueNameExoplanet,
+            hClass: req.body.hClassExoplanet,
+            discoveryYear: req.body.discoveryYearExoplanet,
+        });
+    }
+    
     res.redirect("/exoplanets");
 });
 
