@@ -21,7 +21,7 @@ describe("Test method checkUniqueName", () => {
         expect(checkUniqueName("Trappiste$****01****-00")).toEqual(false);
     });
 
-    it("should return true with blank spaces", () => {
+    it("should return true with blank spaces ", () => {
         expect(checkUniqueName("TEST -. 943")).toEqual(true);
     });
 });
