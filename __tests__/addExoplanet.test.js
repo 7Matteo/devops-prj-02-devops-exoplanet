@@ -17,5 +17,8 @@ describe("Test method checkUniqueName", () => {
         expect(checkUniqueName("TEST-12.")).toEqual(true);
     });
     
+    it("should return false", () => {
+        expect(checkUniqueName("Trappiste$****01****-00")).toEqual(false);
+    });
 
 });
