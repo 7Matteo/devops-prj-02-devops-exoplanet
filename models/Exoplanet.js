@@ -27,7 +27,9 @@ module.exports.search = (uniqueName) => {
 
 module.exports.checkUniqueName = (uniqueName) => {
 
+ if(uniqueName === uniqueName.toUpperCase())
+    return true;
 
-  
-  return true;
+    
+return false;
 }
