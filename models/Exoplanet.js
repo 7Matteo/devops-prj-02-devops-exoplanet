@@ -26,7 +26,7 @@ module.exports.search = (uniqueName) => {
 };
 
 module.exports.checkUniqueName = (uniqueName) => {
-    if (/^[A-Z0-9]*$/.test(uniqueName)) return true;
+    if (/^[A-Z0-9\-\.]*$/.test(uniqueName)) return true;
 
     return false;
 };

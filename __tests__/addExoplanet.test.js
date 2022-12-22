@@ -9,8 +9,13 @@ describe("Test method checkUniqueName", () => {
         expect(checkUniqueName("TEST")).toEqual(true);
     });
 
-    it("should return false if the string contains special character", () => {
+    it("should return false if the string contains special character except . and -", () => {
         expect(checkUniqueName("TEST*")).toEqual(false);
     });
+
+    it("should return true if the string contains . and -", () => {
+        expect(checkUniqueName("TEST-12.")).toEqual(true);
+    });
+    
 
 });
