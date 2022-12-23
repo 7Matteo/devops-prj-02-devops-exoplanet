@@ -21,3 +21,9 @@ Start app
 ```
 npm start
 ```
+
+### Authors
+
+CHOUJAA Soulaïmane
+EL BOUHTANI Oussama
+FIORE Matteo
