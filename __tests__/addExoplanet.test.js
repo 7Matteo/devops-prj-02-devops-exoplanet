@@ -14,8 +14,5 @@ const { checkUniqueName} = require("../models/Exoplanet");
         expect(checkUniqueName("TEST")).toEqual(true);
     })
     
-    
-    
-
     });
     
