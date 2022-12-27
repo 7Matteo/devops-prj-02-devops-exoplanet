@@ -1,4 +1,4 @@
-const { checkUniqueName } = require("../models/Exoplanet");
+const { checkUniqueName } = require("../models/test");
 
 describe("Test method checkUniqueName", () => {
     it("should return false if the string contains one lowerCase letter ", () => {
@@ -25,8 +25,3 @@ describe("Test method checkUniqueName", () => {
         expect(checkUniqueName("TEST -. 943")).toEqual(true);
     });
 });
-
-    })
-    
-    });
-    

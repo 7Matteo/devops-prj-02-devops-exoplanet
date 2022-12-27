@@ -24,7 +24,3 @@ module.exports.search = (uniqueName) => {
     }
     return exoplanetList;
 };
-
-module.exports.checkUniqueName = (uniqueName) => {
-    return /^[A-Z0-9\-\._ ]*$/.test(uniqueName);
-};
