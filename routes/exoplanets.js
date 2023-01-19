@@ -3,7 +3,7 @@ const router = express.Router();
 const { checkUniqueName } = require("../models/Exoplanet");
 
 const Exoplanet = require("../models/Exoplanet.js");
-
+//test test test fin du test
 /* GET exoplanets index. */
 router.get("/", (req, res, next) => {
     res.render("exoplanets/index", { exoplanetsTable: Exoplanet.list() });
